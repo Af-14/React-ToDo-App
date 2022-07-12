@@ -25,6 +25,7 @@ export default function App() {
       <Input name="Age" value={age} onChange={changeAge} />
       <Select name="Favourite Color" value={color} onChange={changeColor} />
     </div>
+    
   );
 }
 
@@ -51,7 +52,7 @@ type SelectType = {
 
 const Select = ({ value, onChange, name }: SelectType) => {
   return (
-    <div className="pa-16">
+    <><div className="pa-16">
       <label>{name}</label>
       <select value={value} onSelect={onChange}>
         <option value="red">Red</option>
@@ -65,5 +66,16 @@ const Select = ({ value, onChange, name }: SelectType) => {
         <option value="white">White</option>
       </select>
     </div>
+    
+    <div>
+        <button type="submit" className="primary full-width">
+                Submit
+              </button>
+              <button className="secondary full-width">
+                Clear
+              </button>
+      </div></>
   );
 };
+
+
